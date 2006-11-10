@@ -55,7 +55,7 @@ cffilter <- function(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
     }
 
     if(root != 0 && root != 1)
-        error("root must be 0 or 1")
+        stop("root must be 0 or 1")
 
     if(drift<0 || drift > 1)
         stop("drift must be 0 or 1")
@@ -137,7 +137,6 @@ cffilter <- function(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
         {
             ## CONSTRUCT THE A MATRIX size n x n
             A = Abuild(n,nq,g,root)
-            ##print(A)
             Ainv = solve(A)
             ## CONSTRUCT THE d MATRIX size n x 1
             for(np in 0:ceiling(n/2-1))
@@ -459,5 +458,5 @@ undrift <- function(x)
 ### function that reverses the columns of a matrix (matlab equivalent)
 flipud <- function(x) {apply(as.matrix(x),2,rev)}
 
-### function that reverses the columns of a matrix (matlab equivalent)
+### function that reverses the rows of a matrix (matlab equivalent)
 fliplr <- function(x) {t(apply(as.matrix(x),1,rev))}

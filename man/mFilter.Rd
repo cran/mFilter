@@ -32,8 +32,8 @@ objects. However a default method is available and should work for any
 
 \usage{
   mFilter(x, \dots)
-  mFilter.default(x, \dots)
-  mFilter.ts(x, filter=c("HP","BK","CF","BW","TR"), \dots)
+  \method{mFilter}{default}(x, \dots)
+  \method{mFilter}{ts}(x, filter=c("HP","BK","CF","BW","TR"), \dots)
 }
 
 \arguments{
