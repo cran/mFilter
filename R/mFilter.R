@@ -126,7 +126,7 @@ plot.mFilter <- function(x, reference.grid = TRUE, col = "steelblue", ask=intera
     lines(x$trend,col="red")
     if (reference.grid) grid()
     legend("topleft",legend=c(x$xname,"trend"),col=c(col,"red"),lty=rep(1,2),ncol=2)
-    plot(x$cycle,type="l",main="Cylical coponent (deviations form trend)",
+    plot(x$cycle,type="l",main="Cyclical component (deviations from trend)",
          ylab="",col=col,...)
     if (reference.grid) grid()
     par(opar)
@@ -137,6 +137,7 @@ plot.mFilter <- function(x, reference.grid = TRUE, col = "steelblue", ask=intera
 residuals.mFilter <- function(object, ...) return(object$cycle)
 
 fitted.mFilter <- function(object, ...) return(object$trend)
+
 
 
 
