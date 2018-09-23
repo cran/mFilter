@@ -64,9 +64,9 @@ hpfilter <- function(x,freq=NULL,type=c("lambda","frequency"),drift=FALSE)
     if(is.ts(xo))
     {
         tsp.x = tsp(xo)
-        x.cycle=ts(x.cycle,star=tsp.x[1],frequency=tsp.x[3])
-        x.trend=ts(x.trend,star=tsp.x[1],frequency=tsp.x[3])
-        x=ts(x,star=tsp.x[1],frequency=tsp.x[3])
+        x.cycle=ts(x.cycle,start=tsp.x[1],frequency=tsp.x[3])
+        x.trend=ts(x.trend,start=tsp.x[1],frequency=tsp.x[3])
+        x=ts(x,start=tsp.x[1],frequency=tsp.x[3])
     }
     A = lambda*Q%*%solve(SIGMA.n+lambda*SIGMA.R)%*%t(Q)
 

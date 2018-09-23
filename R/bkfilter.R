@@ -84,9 +84,9 @@ bkfilter <- function(x,pl=NULL,pu=NULL,nfix=NULL,type=c("fixed","variable"),drif
     if(is.ts(xo))
     {
         tsp.x = tsp(xo)
-        x.cycle=ts(x.cycle,star=tsp.x[1],frequency=tsp.x[3])
-        x.trend=ts(x.trend,star=tsp.x[1],frequency=tsp.x[3])
-        x=ts(x,star=tsp.x[1],frequency=tsp.x[3])
+        x.cycle=ts(x.cycle,start=tsp.x[1],frequency=tsp.x[3])
+        x.trend=ts(x.trend,start=tsp.x[1],frequency=tsp.x[3])
+        x=ts(x,start=tsp.x[1],frequency=tsp.x[3])
     }
     res <- list(cycle=x.cycle,trend=x.trend,fmatrix=AA,title="Baxter-King Filter",
                 xname=xname,call=as.call(match.call()),

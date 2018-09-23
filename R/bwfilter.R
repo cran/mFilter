@@ -49,18 +49,18 @@ bwfilter <- function(x,freq=NULL,nfix=NULL,drift=FALSE)
     if(is.ts(xo))
     {
         tsp.x = tsp(xo)
-        x.cycle=ts(x.cycle,star=tsp.x[1],frequency=tsp.x[3])
-        x.trend=ts(x.trend,star=tsp.x[1],frequency=tsp.x[3])
-        x=ts(x,star=tsp.x[1],frequency=tsp.x[3])
+        x.cycle=ts(x.cycle,start=tsp.x[1],frequency=tsp.x[3])
+        x.trend=ts(x.trend,start=tsp.x[1],frequency=tsp.x[3])
+        x=ts(x,start=tsp.x[1],frequency=tsp.x[3])
     }
     A = mu*Q%*%solve(SIGMA.n+mu*SIGMA.R)%*%t(Q)
 
         if(is.ts(xo))
     {
         tsp.x = tsp(xo)
-        x.cycle=ts(x.cycle,star=tsp.x[1],frequency=tsp.x[3])
-        x.trend=ts(x.trend,star=tsp.x[1],frequency=tsp.x[3])
-        x=ts(x,star=tsp.x[1],frequency=tsp.x[3])
+        x.cycle=ts(x.cycle,start=tsp.x[1],frequency=tsp.x[3])
+        x.trend=ts(x.trend,start=tsp.x[1],frequency=tsp.x[3])
+        x=ts(x,start=tsp.x[1],frequency=tsp.x[3])
     }
 
     res <- list(cycle=x.cycle,trend=x.trend,fmatrix=A,title="Butterworth Filter",

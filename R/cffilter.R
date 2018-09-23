@@ -325,9 +325,9 @@ cffilter <- function(x,pl=NULL,pu=NULL,root=FALSE,drift=FALSE,
     if(is.ts(xo))
     {
         tsp.x = tsp(xo)
-        x.cycle=ts(x.cycle,star=tsp.x[1],frequency=tsp.x[3])
-        x.trend=ts(x.trend,star=tsp.x[1],frequency=tsp.x[3])
-        x=ts(x,star=tsp.x[1],frequency=tsp.x[3])
+        x.cycle=ts(x.cycle,start=tsp.x[1],frequency=tsp.x[3])
+        x.trend=ts(x.trend,start=tsp.x[1],frequency=tsp.x[3])
+        x=ts(x,start=tsp.x[1],frequency=tsp.x[3])
     }
 
     if(type=="asymmetric")
@@ -455,8 +455,8 @@ undrift <- function(x)
 ###-----------------------------------------------------------------------
 ###
 
-### function that reverses the columns of a matrix (matlab equivalent)
+###?function that reverses the columns of a matrix (matlab equivalent)
 flipud <- function(x) {apply(as.matrix(x),2,rev)}
 
-### function that reverses the rows of a matrix (matlab equivalent)
+###?function that reverses the rows of a matrix (matlab equivalent)
 fliplr <- function(x) {t(apply(as.matrix(x),1,rev))}

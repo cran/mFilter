@@ -3,8 +3,8 @@
 import("graphics", "stats", "utils")
 
 export("mFilter",
-       "mFilter.default",
-       "mFilter.ts",
+#       "mFilter.default",
+#       "mFilter.ts",
        "bwfilter",
        "bkfilter",
        "cffilter",
@@ -17,6 +17,7 @@ export("mFilter",
        "residuals.mFilter"
        )
 
+S3method("mFilter", "ts")
 S3method("print", "mFilter")
 S3method("summary", "mFilter")
 S3method("plot", "mFilter")
