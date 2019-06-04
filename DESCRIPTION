@@ -1,7 +1,7 @@
 Package: mFilter
 Title: Miscellaneous Time Series Filters
-Date: 2018-09-22
-Version: 0.1-4
+Date: 2019-07-04
+Version: 0.1-5
 Author: Mehmet Balcilar <mehmet@mbalcilar.net>
 Depends: R (>= 2.2.0), stats
 Suggests: tseries, pastecs, locfit, tseriesChaos, tsDyn, forecast
@@ -16,8 +16,8 @@ Maintainer: Mehmet Balcilar <mehmet@mbalcilar.net>
 License: GPL (>= 2)
 URL: http://www.mbalcilar.net
 Encoding: UTF-8
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2018-09-22 21:15:45 UTC; mbalcilar
+Packaged: 2019-06-04 20:52:13 UTC; mbalcilar
 Repository: CRAN
-Date/Publication: 2018-09-23 13:50:03 UTC
+Date/Publication: 2019-06-04 22:20:12 UTC
